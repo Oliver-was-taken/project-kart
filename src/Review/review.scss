@@ -1,0 +1,44 @@
+.review {
+  display: grid;
+  grid-template-areas: "text . image"
+                            "name . image"
+                             ". . image"
+                            "rating . image";
+  grid-template-columns: 3fr 50px 1fr;
+  grid-auto-rows: 2fr 1em 10px 1fr;
+  height: 200px;
+  width: 900px;
+
+  img {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  p {
+    grid-area: text;
+
+  }
+
+  span {
+    color: rgb(69, 69, 69);
+    grid-area: name;
+  }
+
+  .stars {
+    grid-area: rating;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &.left {
+    margin-left: auto;
+  }
+
+  &.right {
+    margin-right: auto;
+  }
+}
