@@ -1,10 +1,20 @@
 import {useState} from 'react';
-import './App.css';
+import './App.scss';
 import Review from './Review';
 import vaxMerstappen from './assets/vax_merstappen.jpg'
 
 function App() {
     const [count, setCount] = useState(1);
+    const [scrolled, setScrolled] = useState("");
+
+    window.onscroll = function() {
+        console.log(scrolled)
+        if (window.scrollY <= 100) {
+            setScrolled("");
+        }else{
+            setScrolled("scrolled")
+        }
+    };
 
     return (
         <div className="App">
@@ -14,10 +24,13 @@ function App() {
                     onClick={() => setCount((prev) => (prev + 1) % 10)}
                     style={{cursor: 'pointer'}}
                 >
-          {count}
-        </span>
+                    {count}
+                </span>
                 RT
             </h1>
+            <div className={`scroll-down ${scrolled}`}>
+                Scroll down ↓
+            </div>
             <h3>
                 Introducing the ultimate speed demon of the track - our blazing fast
                 go-kart that'll leave your heart racing and your adrenaline pumping!
@@ -27,7 +40,7 @@ function App() {
                 hold on tight, and get ready for the ride of your life with our
                 lightning-fast go-kart - the ultimate thrill seeker's dream come true!
             </h3>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <div>
                 <Review
                     review={'I recently had the chance to drive the F1RT go-kart and it\'s safe to say that it\'s a beast on the track. With lightning-fast acceleration and incredible handling, it felt like I was driving a Formula One car. The attention to detail on this kart is impressive, from its sleek design to its comfortable seat and responsive pedals. Overall, the F1RT is a top-notch go-kart that will leave you with an unforgettable racing experience.'}
@@ -48,6 +61,9 @@ function App() {
                     Weight: Weighing just 200 kilograms, the F1RT is lightweight and
                     maneuverable, providing drivers with the speed and agility they crave.
                 </p>
+            </div>
+            <div>
+
             </div>
         </div>
     );
