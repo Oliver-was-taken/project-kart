@@ -1,15 +1,24 @@
-import { useState } from "react";
-import "./App.css";
-import Review from "./Review";
+import {useState} from 'react';
+import './App.scss';
+import Review from './Review';
 import reviews from "./reviews.json";
 import vaxMerstappen from "./assets/vax_merstappen.jpg";
 import karta from "./assets/karta.jpg";
 import john from "./assets/john.jpg";
 
 const images = [vaxMerstappen, karta, john];
-
 function App() {
-  const [count, setCount] = useState(1);
+    const [count, setCount] = useState(1);
+    const [scrolled, setScrolled] = useState("");
+
+    window.onscroll = function() {
+        console.log(scrolled)
+        if (window.scrollY <= 100) {
+            setScrolled("");
+        }else{
+            setScrolled("scrolled")
+        }
+    };
 
   return (
     <div className="App">
@@ -23,7 +32,10 @@ function App() {
         </span>
         RT
       </h1>
-      <h3>
+      <div className={`scroll-down ${scrolled}`}>
+                Scroll down ↓
+            </div>
+            <h3>
         Introducing the ultimate speed demon of the track - our blazing fast
         go-kart that'll leave your heart racing and your adrenaline pumping!
         With lightning-fast acceleration and hair-raising top speeds that rival
@@ -32,42 +44,6 @@ function App() {
         hold on tight, and get ready for the ride of your life with our
         lightning-fast go-kart - the ultimate thrill seeker's dream come true!
       </h3>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />
@@ -114,8 +90,10 @@ function App() {
           maneuverable, providing drivers with the speed and agility they crave.
         </p>
       </div>
-    </div>
-  );
+    <div>
+</div>
+        </div>
+    );
 }
 
 export default App;
