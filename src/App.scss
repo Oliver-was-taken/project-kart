@@ -77,3 +77,24 @@
     vertical-align: top;
   }
 }
+
+#race {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  #car {
+    height: 150px;
+    bottom: 30px;
+  }
+
+  #kart {
+    height: 150px;
+  }
+}

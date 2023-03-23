@@ -5,13 +5,20 @@ import reviews from "./reviews.json";
 import vaxMerstappen from "./assets/vax_merstappen.jpg";
 import karta from "./assets/karta.jpg";
 import john from "./assets/john.jpg";
+import kart from "./assets/cart.svg";
+import redbull from "./assets/f1car-rb.png";
 
 const images = [vaxMerstappen, karta, john];
+const SCROLL_MULTIPLIER_KART = 8;
+const SCROLL_MULTIPLIER_CAR = 4;
 
 function App() {
   const [count, setCount] = useState(1);
   const [scrolled, setScrolled] = useState(false);
   const reviewDivRef = useRef<HTMLDivElement>(null);
+  const kartRef = useRef<HTMLImageElement>(null);
+  const carRef = useRef<HTMLImageElement>(null);
+  const raceRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -20,7 +27,25 @@ function App() {
 
     observer.observe(reviewDivRef.current!);
 
-    return () => observer.unobserve(reviewDivRef.current!);
+    document.addEventListener("scroll", (event) => {
+      const currScroll = window.scrollY;
+      const documentHeight = document.body.clientHeight;
+
+      const scrollPercent = currScroll / documentHeight;
+
+      const kartPosition =
+        scrollPercent *
+        SCROLL_MULTIPLIER_KART *
+        (document.body.clientWidth - raceRef.current!.clientWidth);
+      const carPosition =
+        scrollPercent *
+        SCROLL_MULTIPLIER_CAR *
+        (document.body.clientWidth - raceRef.current!.clientWidth);
+
+      kartRef.current!.style.left = `${kartPosition}px`;
+      carRef.current!.style.left = `${carPosition}px`;
+    });
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -51,40 +76,10 @@ function App() {
         hold on tight, and get ready for the ride of your life with our
         lightning-fast go-kart - the ultimate thrill seeker's dream come true!
       </h3>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div id={"race"} ref={raceRef}>
+        <img src={redbull} alt="F1 Car" ref={carRef} id={"car"} />
+        <img src={kart} alt="F1RT" ref={kartRef} id={"kart"} />
+      </div>
       <div>
         <div ref={reviewDivRef}>
           {reviews.map((val, idx) => (
