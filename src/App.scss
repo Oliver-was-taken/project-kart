@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -42,19 +44,36 @@
 }
 
 .scroll-down {
-  visibility: unset;
-  position: absolute;
+  opacity: 100%;
+  position: fixed;
   bottom: 2rem;
-  width: 80%;
+  right: 200px;
+  padding: 4px 6px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 4px;
   text-align: center;
-  animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite alternate;
+  transition: opacity 500ms ease-out;
+  transition-delay: 250ms;
 
   &.scrolled {
-      visibility: hidden;
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+#specifications {
+  border-spacing: 0 50px;
+
+  th, td {
+    vertical-align: top;
+  }
 }

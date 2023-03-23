@@ -1,24 +1,31 @@
-import {useState} from 'react';
-import './App.scss';
-import Review from './Review';
+import { useEffect, useRef, useState } from "react";
+import "./App.scss";
+import Review from "./Review";
 import reviews from "./reviews.json";
 import vaxMerstappen from "./assets/vax_merstappen.jpg";
 import karta from "./assets/karta.jpg";
 import john from "./assets/john.jpg";
 
 const images = [vaxMerstappen, karta, john];
-function App() {
-    const [count, setCount] = useState(1);
-    const [scrolled, setScrolled] = useState("");
 
-    window.onscroll = function() {
-        console.log(scrolled)
-        if (window.scrollY <= 100) {
-            setScrolled("");
-        }else{
-            setScrolled("scrolled")
-        }
-    };
+function App() {
+  const [count, setCount] = useState(1);
+  const [scrolled, setScrolled] = useState(false);
+  const reviewDivRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      setScrolled(entries[0].isIntersecting);
+    });
+
+    observer.observe(reviewDivRef.current!);
+
+    return () => observer.unobserve(reviewDivRef.current!);
+  }, []);
+
+  useEffect(() => {
+    document.title = `F${count}RT`;
+  }, [count]);
 
   return (
     <div className="App">
@@ -32,10 +39,10 @@ function App() {
         </span>
         RT
       </h1>
-      <div className={`scroll-down ${scrolled}`}>
-                Scroll down ↓
-            </div>
-            <h3>
+      <div className={`scroll-down ${scrolled ? "scrolled" : ""}`}>
+        Scroll down &darr;
+      </div>
+      <h3>
         Introducing the ultimate speed demon of the track - our blazing fast
         go-kart that'll leave your heart racing and your adrenaline pumping!
         With lightning-fast acceleration and hair-raising top speeds that rival
@@ -63,37 +70,77 @@ function App() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div>
-        {reviews.map((val, idx) => (
-          <Review
-            review={val.review}
-            star={val.stars as 4 | 4.5 | 5}
-            image={images[idx]}
-            name={val.name}
-            direction={idx % 2 == 0 ? "left" : "right"}
-          />
-        ))}
+        <div ref={reviewDivRef}>
+          {reviews.map((val, idx) => (
+            <Review
+              key={idx}
+              review={val.review}
+              star={val.stars as 4 | 4.5 | 5}
+              image={images[idx]}
+              name={val.name}
+              direction={idx % 2 == 0 ? "left" : "right"}
+            />
+          ))}
+        </div>
 
         <h2>Specifications</h2>
-        <p>
-          Engine Power: The F1RT go-kart packs a punch with a powerful 200cc
-          engine, delivering lightning-fast acceleration and a top speed that
-          can compete with even the fastest Formula One cars. <br />
-          Engine Revs: This go-kart is built for speed, with an impressive
-          redline of 12,000 RPM that will leave you breathless. <br />
-          Safety: None.
-          <br /> Design: With a sleek and aerodynamic design, the F1RT looks as
-          fast as it drives. Its low center of gravity and lightweight
-          construction make it incredibly nimble and responsive on the track.
-          <br />
-          Weight: Weighing just 200 kilograms, the F1RT is lightweight and
-          maneuverable, providing drivers with the speed and agility they crave.
-        </p>
+        <table id={"specifications"}>
+          <tr>
+            <th>Engine Power:</th>
+            <td>
+              The F1RT go-kart packs a punch with a powerful 200cc engine,
+              delivering lightning-fast acceleration and a top speed that can
+              compete with even the fastest Formula One cars.
+            </td>
+          </tr>
+          <tr>
+            <th>Engine Revs:</th>
+            <td>
+              This go-kart is built for speed, with an impressive redline of
+              12,000 RPM that will leave you breathless.
+            </td>
+          </tr>
+          <tr>
+            <th>Safety:</th>
+            <td>None.</td>
+          </tr>
+          <tr>
+            <th>Design:</th>
+            <td>
+              With a sleek and aerodynamic design, the F1RT looks as fast as it
+              drives. Its low center of gravity and lightweight construction
+              make it incredibly nimble and responsive on the track.
+            </td>
+          </tr>
+          <tr>
+            <th>Weight:</th>
+            <td>
+              Weighing just 200 kilograms, the F1RT is lightweight and
+              maneuverable, providing drivers with the speed and agility they
+              crave.
+            </td>
+          </tr>
+        </table>
       </div>
-    <div>
-</div>
-        </div>
-    );
+      <div></div>
+    </div>
+  );
 }
 
 export default App;

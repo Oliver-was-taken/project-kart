@@ -3,5 +3,16 @@
     "review": "I recently had the chance to drive the F1RT go-kart and it's safe to say that it's a beast on the track. With lightning-fast acceleration and incredible handling, it felt like I was driving a Formula One car. The attention to detail on this kart is impressive, from its sleek design to its comfortable seat and responsive pedals. Overall, the F1RT is a top-notch go-kart that will leave you with an unforgettable racing experience.",
     "stars": 4.5,
     "name": "Vax Merstappen"
+  },
+  {
+    "review": "I recently had the opportunity to ride this go-kart and I have to say, it was one of the most exhilarating experiences of my life. The speed and acceleration were absolutely mind-blowing - I felt like I was in a rocket ship rather than a go-kart!\n\nThe handling was also impressive - I was able to take corners at high speeds with ease, thanks to the kart's superior engineering and design. And the fact that it can keep up with Formula One cars is just insane - I felt like a true racing champion out there on the track.\n\nOverall, I would highly recommend this go-kart to anyone looking for a serious thrill. Just be prepared to have your heart racing and your adrenaline pumping from start to finish!",
+    "stars": 5,
+    "name": "Karta"
+  },
+  {
+    "review": "This go-kart is an adrenaline rush! The speed, acceleration, and handling are all top-notch. It's an absolute blast to ride and I highly recommend it for anyone looking for a thrilling racing experience.",
+    "stars": 5,
+    "name": "John"
   }
+
 ]
