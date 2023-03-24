@@ -21,6 +21,8 @@ function App() {
   const carRef = useRef<HTMLImageElement>(null);
   const raceRef = useRef<HTMLDivElement>(null);
 
+  const test: number = "Hallsfgerdseghdtarhetadrhjrzaj";
+
   useEffect(() => {
     AOS.init();
 
