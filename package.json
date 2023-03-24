@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "oliver-was-taken.github.io/project-kart",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
