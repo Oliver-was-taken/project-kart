@@ -80,18 +80,17 @@
 
 #race {
   position: relative;
-  height: 400px;
+  height: 180vh;
   overflow: hidden;
 
   img {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 50%;
   }
 
   #car {
     height: 150px;
-    bottom: 30px;
   }
 
   #kart {

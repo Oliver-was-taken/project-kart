@@ -7,10 +7,11 @@ import karta from "./assets/karta.jpg";
 import john from "./assets/john.jpg";
 import kart from "./assets/cart.svg";
 import redbull from "./assets/f1car-rb.png";
+import AOS from "aos";
 
 const images = [vaxMerstappen, karta, john];
-const SCROLL_MULTIPLIER_KART = 8;
-const SCROLL_MULTIPLIER_CAR = 4;
+const SCROLL_MULTIPLIER_KART = 3;
+const SCROLL_MULTIPLIER_CAR = 2;
 
 function App() {
   const [count, setCount] = useState(1);
@@ -21,13 +22,15 @@ function App() {
   const raceRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    AOS.init();
+
     const observer = new IntersectionObserver((entries) => {
       setScrolled(entries[0].isIntersecting);
     });
 
     observer.observe(reviewDivRef.current!);
 
-    document.addEventListener("scroll", (event) => {
+    document.addEventListener("scroll", () => {
       const currScroll = window.scrollY;
       const documentHeight = document.body.clientHeight;
 
@@ -36,11 +39,11 @@ function App() {
       const kartPosition =
         scrollPercent *
         SCROLL_MULTIPLIER_KART *
-        (document.body.clientWidth - raceRef.current!.clientWidth);
+        (document.body.clientWidth - kartRef.current!.clientWidth);
       const carPosition =
         scrollPercent *
         SCROLL_MULTIPLIER_CAR *
-        (document.body.clientWidth - raceRef.current!.clientWidth);
+        (document.body.clientWidth - carRef.current!.clientWidth);
 
       kartRef.current!.style.left = `${kartPosition}px`;
       carRef.current!.style.left = `${carPosition}px`;
@@ -82,6 +85,7 @@ function App() {
       </div>
       <div>
         <div ref={reviewDivRef}>
+          <h2>Our Reviews</h2>
           {reviews.map((val, idx) => (
             <Review
               key={idx}
