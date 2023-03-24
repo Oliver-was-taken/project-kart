@@ -1,0 +1,25 @@
+on:
+ pull_request: 
+  branches: [main]
+  
+name: Test Pull Request
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Typescript checker
+        run: tsc --noEmit
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Project
+        run: npm run build --if-present
