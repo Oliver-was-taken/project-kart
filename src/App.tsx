@@ -85,7 +85,7 @@ function App() {
       </div>
       <div>
         <div ref={reviewDivRef}>
-          <h2>Our Reviews</h2>
+          <h2 data-aos="fade-down">Our Reviews</h2>
           {reviews.map((val, idx) => (
             <Review
               key={idx}
@@ -98,44 +98,38 @@ function App() {
           ))}
         </div>
 
-        <h2>Specifications</h2>
-        <table id={"specifications"}>
-          <tr>
-            <th>Engine Power:</th>
-            <td>
-              The F1RT go-kart packs a punch with a powerful 200cc engine,
-              delivering lightning-fast acceleration and a top speed that can
-              compete with even the fastest Formula One cars.
-            </td>
-          </tr>
-          <tr>
-            <th>Engine Revs:</th>
-            <td>
-              This go-kart is built for speed, with an impressive redline of
-              12,000 RPM that will leave you breathless.
-            </td>
-          </tr>
-          <tr>
-            <th>Safety:</th>
-            <td>None.</td>
-          </tr>
-          <tr>
-            <th>Design:</th>
-            <td>
-              With a sleek and aerodynamic design, the F1RT looks as fast as it
-              drives. Its low center of gravity and lightweight construction
-              make it incredibly nimble and responsive on the track.
-            </td>
-          </tr>
-          <tr>
-            <th>Weight:</th>
-            <td>
-              Weighing just 200 kilograms, the F1RT is lightweight and
-              maneuverable, providing drivers with the speed and agility they
-              crave.
-            </td>
-          </tr>
-        </table>
+        <div>
+          <h2>Specifications</h2>
+          <h3>Engine Power</h3>
+          <p>
+            The F1RT go-kart packs a punch with a powerful 200cc engine,
+            delivering lightning-fast acceleration and a top speed that can
+            compete with even the fastest Formula One cars.
+          </p>
+          <hr />
+          <h3>Engine Revs</h3>
+          <p>
+            This go-kart is built for speed, with an impressive redline of
+            12,000 RPM that will leave you breathless.
+          </p>
+          <hr />
+          <h3>Safety</h3>
+          <p>None.</p>
+          <hr />
+          <h3>Design</h3>
+          <p>
+            With a sleek and aerodynamic design, the F1RT looks as fast as it
+            drives. Its low center of gravity and lightweight construction make
+            it incredibly nimble and responsive on the track.
+          </p>
+          <hr />
+          <h3>Weight</h3>
+          <p>
+            Weighing just 200 kilograms, the F1RT is lightweight and
+            maneuverable, providing drivers with the speed and agility they
+            crave.
+          </p>
+        </div>
       </div>
       <div></div>
     </div>
