@@ -100,3 +100,26 @@
     transform: rotate(-360deg) translateX(150px) rotate(-180deg);
   }
 }
+
+.Footer {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "left" "right";
+  grid-template-columns: 50% 50%;
+  margin: 0;
+  backdrop-filter: invert(5%);
+  text-align: left;
+  padding: 1.5rem;
+
+  &.left {
+    grid-area: left;
+  }
+
+  &.right {
+    grid-area: right;
+  }
+}
+
+.profile-link {
+  color: white;
+}

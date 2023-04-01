@@ -133,6 +133,27 @@ function App() {
             <div id="rocket-space">
                 <img id="rocket-kart" src={rocketKart} alt={"animated_kart"}/>
             </div>
+            <div className="Footer">
+                <div className="left">
+                    Project-Kart <br/>
+                    <a href="https://github.com/C0RR1T" className="profile-link">Corsin Ragettli</a> & <a
+                    href="https://github.com/Oliver-was-taken" className="profile-link">Oliver Jenny</a> <br/>
+                    BBW
+                </div>
+                <div className={"right"}>
+                    Quellen:<br/>
+                    <table>
+                        <tr>
+                            <th>Bilder:</th>
+                            <td>Corsin wie heisst die AI nomal?</td>
+                        </tr>
+                        <tr>
+                            <th>Texte:</th>
+                            <td>ChatGPT & Selbst-komponiert</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     );
 }
