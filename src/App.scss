@@ -64,12 +64,13 @@
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: 1px solid #555555;
     border-radius: 25px;
 
     th, td {
       vertical-align: top;
       text-align: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     tr {
