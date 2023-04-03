@@ -6,8 +6,8 @@
     <!-- Text -->
     <g>
         <text fill="white" font-size="20px" x="100" y="100" font-family="">
-            <!-- TODO: Design this text -->
             Wroom Wroom!
+            <animate attributeName="fill" values="none;white;white" repeatCount="indefinite" dur="2s"/>
         </text>
     </g>
     <!-- Flames -->

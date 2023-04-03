@@ -4,25 +4,25 @@
 
 ### Inhaltlich
 
-| Ziel                                                                                        | Erfüllt? | Begründung                                             |
-|---------------------------------------------------------------------------------------------|:--------:|--------------------------------------------------------|
-| reisserische Überschriften von einem imaginären (over-the-top) Produkt                      |    ✅     | Kleines extra feature beim Knopfdruck auf den Titel    |
-| Feature-Liste mit Behauptungen, fiktiven User-Quotes                                        |    ✅     | Reviewes von Imaginären Renn-fahrern, Feature-Table... |
-| Bildern/Darstellungen/Grafiken des Produkts (eigene, Stock-Images, AI-generierte, ...)      |    ✅     | Bilder von Renn-fahrern, sonstig Graphiken             |
-| einer fiktiven Preisstruktur usw.                                                           |    ❌     | table tbd                                              |
-| klaren Quellenangabe: Alles darf zusammenkopiert werden, aber bitte entsprechend markieren. |    ❌     | footer tbd                                             |
+| Ziel                                                                                        | Erfüllt? | Begründung                                            |
+|---------------------------------------------------------------------------------------------|:--------:|-------------------------------------------------------|
+| reisserische Überschriften von einem imaginären (over-the-top) Produkt                      |    ✅     | Kleines extra feature beim Knopfdruck auf den Titel   |
+| Feature-Liste mit Behauptungen, fiktiven User-Quotes                                        |    ✅     | Reviews von Imaginären Renn-fahrern, Feature-Table... |
+| Bildern/Darstellungen/Grafiken des Produkts (eigene, Stock-Images, AI-generierte, ...)      |    ✅     | Bilder von Renn-fahrern, sonstig Graphiken            |
+| einer fiktiven Preisstruktur usw.                                                           |    ✅     | table mit 3 Preisklassen / Modellen                   |
+| klaren Quellenangabe: Alles darf zusammenkopiert werden, aber bitte entsprechend markieren. |    ✅     | Footer mit Links                                      |
 
 ### Technisch
 
-| Ziel                                                             |        Erfüllt?         | Begründung                                                            |
-|------------------------------------------------------------------|:-----------------------:|-----------------------------------------------------------------------|
-| eine statische, Single-Page React-Applikation ohne Backend       |            ✅            | Siehe Seite                                                           |
-| ein over-the-top Design mit Animationen und dynamischen Effekten |            ✅            | Rennen, Animiertes SVG, Animate on scroll...                          |
-| Scrolling-Effekte (Parallax, Reveal, Animate-on-Scroll)          |            ✅            | Animate-on-scroll                                                     |
-| eine selbst "programmierte", animierte SVG-Grafik mit Text       |            ✅            | Animation + Text zu bestehendem SVG hinzugefügt (SVG leicht getweakt) |
-| ein eigenes Favicon                                              |            ❌            | tbd -> gokart oder so                                                 |
-| eine eigene CSS-Animation                                        |            ✅            | Go-Kart fährt im Kreis                                                |
-| optional werden Resultate automatisch publiziert z.B.            | ✅ GH-Pages + GH-Actions |
+| Ziel                                                             | Erfüllt? | Begründung                                                            |
+|------------------------------------------------------------------|:--------:|-----------------------------------------------------------------------|
+| eine statische, Single-Page React-Applikation ohne Backend       |    ✅     | Siehe Seite                                                           |
+| ein over-the-top Design mit Animationen und dynamischen Effekten |    ✅     | Rennen, Animiertes SVG, Animate on scroll...                          |
+| Scrolling-Effekte (Parallax, Reveal, Animate-on-Scroll)          |    ✅     | Animate-on-scroll                                                     |
+| eine selbst "programmierte", animierte SVG-Grafik mit Text       |    ✅     | Animation + Text zu bestehendem SVG hinzugefügt (SVG leicht getweakt) |
+| ein eigenes Favicon                                              |    ❌     | tbd -> gokart oder so                                                 |
+| eine eigene CSS-Animation                                        |    ✅     | Go-Kart fährt im Kreis                                                |
+| optional werden Resultate automatisch publiziert z.B.            |    ✅     | GH-Pages + GH-Actions                                                 |
 
 ## Selbstevaluation
 
