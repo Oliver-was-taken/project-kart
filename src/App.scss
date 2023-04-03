@@ -52,11 +52,34 @@
   padding: 3rem;
   border-radius: 25px;
   border-spacing: 0 50px;
+}
 
-  th, td {
-    vertical-align: top;
-    text-align: left;
+#pricing {
+  backdrop-filter: invert(5%);
+  padding: 3rem;
+  border-radius: 25px;
+  border-spacing: 0 50px;
+
+  table {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #555555;
+    border-radius: 25px;
+
+    th, td {
+      vertical-align: top;
+      text-align: left;
+    }
+
+    tr:nth-child(1) {
+      backdrop-filter: invert(25%);
+    };
+    tr:nth-child(odd) {
+      backdrop-filter: invert(10%);
+
+    }
   }
+
 }
 
 #race {
@@ -102,11 +125,11 @@
 }
 
 .Footer {
+  margin: 3rem 0 0;
   display: grid;
   width: 100%;
   grid-template-areas: "left" "right";
   grid-template-columns: 50% 50%;
-  margin: 0;
   backdrop-filter: invert(5%);
   text-align: left;
   padding: 1.5rem;
@@ -120,6 +143,7 @@
   }
 }
 
-.profile-link {
+.footer-link {
   color: white;
+  text-decoration: 1px white solid underline;
 }
