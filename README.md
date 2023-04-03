@@ -21,7 +21,7 @@
 | Scrolling-Effekte (Parallax, Reveal, Animate-on-Scroll)          |    ✅     | Animate-on-scroll                                                     |
 | eine selbst "programmierte", animierte SVG-Grafik mit Text       |    ✅     | Animation + Text zu bestehendem SVG hinzugefügt (SVG leicht getweakt) |
 | ein eigenes Favicon                                              |    ✅     | vax Merstappen ist nun unser Maskottchen                              |
-| eine eigene CSS-Animation                                        |    ✅     | Go-Kart fährt im Kreis                                                |
+| eine eigene CSS-Animation                                        |    ✅     | Go-Kart fährt im Kreis (oder so)                                      |
 | optional werden Resultate automatisch publiziert z.B.            |    ✅     | GH-Pages + GH-Actions                                                 |
 
 ## Selbstevaluation
