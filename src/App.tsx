@@ -97,7 +97,7 @@ function App() {
         </div>
 
                 <h2>Specifications</h2>
-                <div id="specifications">
+                <div className="specifications">
                     <h3>Engine Power</h3>
                     <p>
                         The F1RT go-kart packs a punch with a powerful 200cc engine,
@@ -239,7 +239,7 @@ function App() {
                     </table>
                 </div>
             </div>
-            <div className="Footer">
+            <div className="footer specifications">
                 <div className="left">
                     Project-Kart <br/>
                     <a href="https://github.com/C0RR1T" className="footer-link">Corsin Ragettli</a> & <a
