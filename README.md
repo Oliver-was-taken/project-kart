@@ -14,13 +14,13 @@
 
 ### Technisch
 
-| Ziel                                                             | Erfüllt? | Begründung                                                            |
-|------------------------------------------------------------------|:--------:|-----------------------------------------------------------------------|
+| Ziel                                                             | Erfüllt?  | Begründung                                                            |
+|------------------------------------------------------------------|:---------:|-----------------------------------------------------------------------|
 | eine statische, Single-Page React-Applikation ohne Backend       |    ✅     | Siehe Seite                                                           |
 | ein over-the-top Design mit Animationen und dynamischen Effekten |    ✅     | Rennen, Animiertes SVG, Animate on scroll...                          |
 | Scrolling-Effekte (Parallax, Reveal, Animate-on-Scroll)          |    ✅     | Animate-on-scroll                                                     |
 | eine selbst "programmierte", animierte SVG-Grafik mit Text       |    ✅     | Animation + Text zu bestehendem SVG hinzugefügt (SVG leicht getweakt) |
-| ein eigenes Favicon                                              |    ❌     | tbd -> gokart oder so                                                 |
+| ein eigenes Favicon                                              |    ✅     | vax Merstappen ist nun unser Maskottchen                              |
 | eine eigene CSS-Animation                                        |    ✅     | Go-Kart fährt im Kreis                                                |
 | optional werden Resultate automatisch publiziert z.B.            |    ✅     | GH-Pages + GH-Actions                                                 |
 
