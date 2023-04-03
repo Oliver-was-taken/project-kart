@@ -96,181 +96,199 @@ function App() {
           ))}
         </div>
 
-                <h2>Specifications</h2>
-                <div className="specifications">
-                    <h3>Engine Power</h3>
-                    <p>
-                        The F1RT go-kart packs a punch with a powerful 200cc engine,
-                        delivering lightning-fast acceleration and a top speed that can
-                        compete with even the fastest Formula One cars.
-                    </p>
-                    <hr/>
-                    <h3>Engine Revs</h3>
-                    <p>
-                        This go-kart is built for speed, with an impressive redline of
-                        12,000 RPM that will leave you breathless.
-                    </p>
-                    <hr/>
-                    <h3>Safety</h3>
-                    <p>None.</p>
-                    <hr/>
-                    <h3>Design</h3>
-                    <p>
-                        With a sleek and aerodynamic design, the F1RT looks as fast as it
-                        drives. Its low center of gravity and lightweight construction make
-                        it incredibly nimble and responsive on the track.
-                    </p>
-                    <hr/>
-                    <h3>Weight</h3>
-                    <p>
-                        Weighing just 200 kilograms, the F1RT is lightweight and
-                        maneuverable, providing drivers with the speed and agility they
-                        crave.
-                    </p>
-                </div>
+        <div data-aos="fade-down">
+          <h2>Specifications</h2>
+          <div className="specifications">
+            <h3>Engine Power</h3>
+            <p>
+              The F1RT go-kart packs a punch with a powerful 200cc engine,
+              delivering lightning-fast acceleration and a top speed that can
+              compete with even the fastest Formula One cars.
+            </p>
+            <hr />
+            <h3>Engine Revs</h3>
+            <p>
+              This go-kart is built for speed, with an impressive redline of
+              12,000 RPM that will leave you breathless.
+            </p>
+            <hr />
+            <h3>Safety</h3>
+            <p>None.</p>
+            <hr />
+            <h3>Design</h3>
+            <p>
+              With a sleek and aerodynamic design, the F1RT looks as fast as it
+              drives. Its low center of gravity and lightweight construction
+              make it incredibly nimble and responsive on the track.
+            </p>
+            <hr />
+            <h3>Weight</h3>
+            <p>
+              Weighing just 200 kilograms, the F1RT is lightweight and
+              maneuverable, providing drivers with the speed and agility they
+              crave.
+            </p>
+          </div>
+          <br />
+          <br />
+          <div data-aos={"fade-down"}>
+            <div id="pricing">
+              <h2>Pricing</h2>
+              <h3>F1RT Speedster</h3>
+              <table>
+                <tr>
+                  <th>Specification</th>
+                  <th>Description</th>
+                  <th>Price (CHF)</th>
+                </tr>
+                <tr>
+                  <td>Engine Power</td>
+                  <td>Powerful 200cc engine for lightning-fast acceleration</td>
+                  <td>75'000 CHF</td>
+                </tr>
+                <tr>
+                  <td>Engine Revs</td>
+                  <td>
+                    Impressive redline of 12,000 RPM that will leave you
+                    breathless
+                  </td>
+                </tr>
+                <tr>
+                  <td>Safety</td>
+                  <td>None</td>
+                </tr>
+                <tr>
+                  <td>Design</td>
+                  <td>Sleek and aerodynamic with low center of gravity</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>Lightweight construction for incredible nimbleness</td>
+                </tr>
+              </table>
+              <br />
+              <h3>F1RT Thunderbolt</h3>
+              <table>
+                <tr>
+                  <th>Specification</th>
+                  <th>Description</th>
+                  <th>Price (CHF)</th>
+                </tr>
+                <tr>
+                  <td>Engine Power</td>
+                  <td>Powerful 200cc engine for lightning-fast acceleration</td>
+                  <td>50'000 CHF</td>
+                </tr>
+                <tr>
+                  <td>Engine Revs</td>
+                  <td>
+                    Impressive redline of 12,000 RPM that will leave you
+                    breathless
+                  </td>
+                </tr>
+                <tr>
+                  <td>Safety</td>
+                  <td>None</td>
+                </tr>
+                <tr>
+                  <td>Design</td>
+                  <td>Sleek and aerodynamic with low center of gravity</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>Lightweight construction for incredible nimbleness</td>
+                </tr>
+                <tr>
+                  <td>Additional Feature</td>
+                  <td>
+                    Customizable LED lighting package for a high-tech look and
+                    enhanced visibility on the track
+                  </td>
+                </tr>
+              </table>
+              <br />
+              <h3>F1RT Lightspeed</h3>
+              <table>
+                <tr>
+                  <th>Specification</th>
+                  <th>Description</th>
+                  <th>Price (CHF)</th>
+                </tr>
+                <tr>
+                  <td>Engine Power</td>
+                  <td>Powerful 200cc engine for lightning-fast acceleration</td>
+                  <td>75'000 CHF</td>
+                </tr>
+                <tr>
+                  <td>Engine Revs</td>
+                  <td>
+                    Impressive redline of 12,000 RPM that will leave you
+                    breathless
+                  </td>
+                </tr>
+                <tr>
+                  <td>Safety</td>
+                  <td>None</td>
+                </tr>
+                <tr>
+                  <td>Design</td>
+                  <td>Sleek and aerodynamic with low center of gravity</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>Lightweight construction for incredible nimbleness</td>
+                </tr>
+                <tr>
+                  <td>Additional Features</td>
+                  <td>
+                    Customizable LED lighting package for a high-tech look and
+                    enhanced visibility on the track, State-of-the-art onboard
+                    computer system for real-time data analysis and performance
+                    optimization
+                  </td>
+                </tr>
+              </table>
             </div>
-            <div id="rocket-space">
-                <img id="rocket-kart" src={rocketKart} alt={"animated_kart"}/>
-            </div>
-            <div>
-                <h2>Pricing</h2>
-                <div id="pricing">
-                    <h3>F1RT Speedster</h3>
-                    <table>
-                        <tr>
-                            <th>Specification</th>
-                            <th>Description</th>
-                            <th>Price (CHF)</th>
-                        </tr>
-                        <tr>
-                            <td>Engine Power</td>
-                            <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                            <td>75'000 CHF</td>
-                        </tr>
-                        <tr>
-                            <td>Engine Revs</td>
-                            <td>Impressive redline of 12,000 RPM that will leave you breathless</td>
-                        </tr>
-                        <tr>
-                            <td>Safety</td>
-                            <td>None</td>
-                        </tr>
-                        <tr>
-                            <td>Design</td>
-                            <td>Sleek and aerodynamic with low center of gravity</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>Lightweight construction for incredible nimbleness</td>
-                        </tr>
-                    </table>
-                    <br/>
-                    <h3>F1RT Thunderbolt</h3>
-                    <table>
-                        <tr>
-                            <th>Specification</th>
-                            <th>Description</th>
-                            <th>Price (CHF)</th>
-                        </tr>
-                        <tr>
-                            <td>Engine Power</td>
-                            <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                            <td>50'000 CHF</td>
-                        </tr>
-                        <tr>
-                            <td>Engine Revs</td>
-                            <td>Impressive redline of 12,000 RPM that will leave you breathless</td>
-                        </tr>
-                        <tr>
-                            <td>Safety</td>
-                            <td>None</td>
-                        </tr>
-                        <tr>
-                            <td>Design</td>
-                            <td>Sleek and aerodynamic with low center of gravity</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>Lightweight construction for incredible nimbleness</td>
-                        </tr>
-                        <tr>
-                            <td>Additional Feature</td>
-                            <td>Customizable LED lighting package for a high-tech look and enhanced visibility on the
-                                track
-                            </td>
-                        </tr>
-                    </table>
-                    <br/>
-                    <h3>F1RT Lightspeed</h3>
-                    <table>
-                        <tr>
-                            <th>Specification</th>
-                            <th>Description</th>
-                            <th>Price (CHF)</th>
-                        </tr>
-                        <tr>
-                            <td>Engine Power</td>
-                            <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                            <td>75'000 CHF</td>
-                        </tr>
-                        <tr>
-                            <td>Engine Revs</td>
-                            <td>Impressive redline of 12,000 RPM that will leave you breathless</td>
-                        </tr>
-                        <tr>
-                            <td>Safety</td>
-                            <td>None</td>
-                        </tr>
-                        <tr>
-                            <td>Design</td>
-                            <td>Sleek and aerodynamic with low center of gravity</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>Lightweight construction for incredible nimbleness</td>
-                        </tr>
-                        <tr>
-                            <td>Additional Features</td>
-                            <td>Customizable LED lighting package for a high-tech look and enhanced visibility on the
-                                track, State-of-the-art onboard computer system for real-time data analysis and
-                                performance optimization
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div className="footer specifications">
-                <div className="left">
-                    Project-Kart <br/>
-                    <a href="https://github.com/C0RR1T" className="footer-link">Corsin Ragettli</a> & <a
-                    href="https://github.com/Oliver-was-taken" className="footer-link">Oliver Jenny</a> <br/>
-                    BBW
-                </div>
-                <div className={"right"}>
-                    Quellen:<br/>
-                    <table>
-                        <tr>
-                            <th>Bilder:</th>
-                            <td>
-                                <a href="https://stablediffusionweb.com/" className="footer-link">Stable Diffusion</a>,
-                                <a href="https://www.flaticon.com/free-icon/karting_1506345?term=karting&page=1&position=4&origin=tag&related_id=1506345"
-                                   className="footer-link">Go-Kart
-                                    SVG</a>,
-                                <a href="https://all-free-download.com/free-vector/download/formula-1-cars_26731.html"
-                                   className="footer-link">F1-Car</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Texte:</th>
-                            <td><a href="https://openai.com/blog/chatgpt" className="footer-link">Chat-GPT</a>,
-                                Selbst-komponiert
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+          </div>
         </div>
-    );
+      </div>
+      <div id="rocket-space">
+        <img id="rocket-kart" src={rocketKart} alt={"animated_kart"} />
+      </div>
+      <div className="footer specifications">
+        <div className="left">
+          Project-Kart <br />
+          <span>&copy; </span>
+          <a href="https://github.com/C0RR1T" className="profile-link">
+            Corsin Ragettli
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://github.com/Oliver-was-taken"
+            className="profile-link"
+          >
+            Oliver Jenny
+          </a>{" "}
+          <br />
+          BBW
+        </div>
+        <div className={"right"}>
+          Quellen:
+          <br />
+          <table>
+            <tr>
+              <th>Bilder:</th>
+              <td>StableDiffusion</td>
+            </tr>
+            <tr>
+              <th>Texte:</th>
+              <td>ChatGPT & Selbst-komponiert</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
