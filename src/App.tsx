@@ -144,7 +144,7 @@ function App() {
                 <tr>
                   <td>Engine Power</td>
                   <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                  <td>75'000 CHF</td>
+                  <td>50'000 CHF</td>
                 </tr>
                 <tr>
                   <td>Engine Revs</td>
@@ -177,7 +177,7 @@ function App() {
                 <tr>
                   <td>Engine Power</td>
                   <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                  <td>50'000 CHF</td>
+                  <td>75'000 CHF</td>
                 </tr>
                 <tr>
                   <td>Engine Revs</td>
@@ -217,7 +217,7 @@ function App() {
                 <tr>
                   <td>Engine Power</td>
                   <td>Powerful 200cc engine for lightning-fast acceleration</td>
-                  <td>75'000 CHF</td>
+                  <td>100'000 CHF</td>
                 </tr>
                 <tr>
                   <td>Engine Revs</td>
