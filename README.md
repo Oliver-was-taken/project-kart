@@ -4,13 +4,13 @@
 
 ### Inhaltlich
 
-| Ziel                                                                                        | Erfüllt? | Begründung                                             |
-|---------------------------------------------------------------------------------------------|:--------:|--------------------------------------------------------|
-| reisserische Überschriften von einem imaginären (over-the-top) Produkt                      |    ✅     | Kleines extra feature beim Knopfdruck auf den Titel    |
-| Feature-Liste mit Behauptungen, fiktiven User-Quotes                                        |    ✅     | Reviewes von Imaginären Renn-fahrern, Feature-Table... |
-| Bildern/Darstellungen/Grafiken des Produkts (eigene, Stock-Images, AI-generierte, ...)      |    ✅     | Bilder von Renn-fahrern, sonstig Graphiken             |
-| einer fiktiven Preisstruktur usw.                                                           |    ❌     | table tbd                                              |
-| klaren Quellenangabe: Alles darf zusammenkopiert werden, aber bitte entsprechend markieren. |    ❌     | footer tbd                                             |
+| Ziel                                                                                        | Erfüllt? | Begründung                                            |
+|---------------------------------------------------------------------------------------------|:--------:|-------------------------------------------------------|
+| reisserische Überschriften von einem imaginären (over-the-top) Produkt                      |    ✅     | Kleines extra feature beim Knopfdruck auf den Titel   |
+| Feature-Liste mit Behauptungen, fiktiven User-Quotes                                        |    ✅     | Reviews von Imaginären Renn-fahrern, Feature-Table... |
+| Bildern/Darstellungen/Grafiken des Produkts (eigene, Stock-Images, AI-generierte, ...)      |    ✅     | Bilder von Renn-fahrern, sonstig Graphiken            |
+| einer fiktiven Preisstruktur usw.                                                           |    ✅     | table mit 3 Preisklassen / Modellen                   |
+| klaren Quellenangabe: Alles darf zusammenkopiert werden, aber bitte entsprechend markieren. |    ✅     | Footer mit Links                                      |
 
 ### Technisch
 

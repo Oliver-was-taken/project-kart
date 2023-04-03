@@ -136,7 +136,7 @@ function App() {
             <div>
                 <h2>Pricing</h2>
                 <div id="pricing">
-                    <h3>Model1: F1RT Speedster</h3>
+                    <h3>F1RT Speedster</h3>
                     <table>
                         <tr>
                             <th>Specification</th>
@@ -166,7 +166,7 @@ function App() {
                         </tr>
                     </table>
                     <br/>
-                    <h3>Model1: F1RT Thunderbolt</h3>
+                    <h3>F1RT Thunderbolt</h3>
                     <table>
                         <tr>
                             <th>Specification</th>
@@ -202,7 +202,7 @@ function App() {
                         </tr>
                     </table>
                     <br/>
-                    <h3>Model1: F1RT Lightspeed</h3>
+                    <h3>F1RT Lightspeed</h3>
                     <table>
                         <tr>
                             <th>Specification</th>
