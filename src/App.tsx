@@ -132,8 +132,8 @@ function App() {
           <br />
           <br />
           <div data-aos={"fade-down"}>
+            <h2>Pricing</h2>
             <div id="pricing">
-              <h2>Pricing</h2>
               <h3>F1RT Speedster</h3>
               <table>
                 <tr>
