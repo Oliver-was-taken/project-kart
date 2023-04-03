@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.scss";
 import Review from "./Review";
 import reviews from "./reviews.json";
@@ -15,87 +15,86 @@ const SCROLL_MULTIPLIER_KART = 3;
 const SCROLL_MULTIPLIER_CAR = 2;
 
 function App() {
-    const [count, setCount] = useState(1);
-    const [scrolled, setScrolled] = useState(false);
-    const reviewDivRef = useRef<HTMLDivElement>(null);
-    const kartRef = useRef<HTMLImageElement>(null);
-    const carRef = useRef<HTMLImageElement>(null);
-    const raceRef = useRef<HTMLDivElement>(null);
+  const [count, setCount] = useState(1);
+  const [scrolled, setScrolled] = useState(false);
+  const reviewDivRef = useRef<HTMLDivElement>(null);
+  const kartRef = useRef<HTMLImageElement>(null);
+  const carRef = useRef<HTMLImageElement>(null);
+  const raceRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        AOS.init();
+  useEffect(() => {
+    AOS.init();
 
-        const observer = new IntersectionObserver((entries) => {
-            setScrolled(entries[0].isIntersecting);
-        });
+    document.addEventListener("scroll", () => {
+      const currScroll = window.scrollY;
+      const documentHeight = document.body.clientHeight;
 
-        observer.observe(reviewDivRef.current!);
+      const scrollPercent = currScroll / documentHeight;
 
-        document.addEventListener("scroll", () => {
-            const currScroll = window.scrollY;
-            const documentHeight = document.body.clientHeight;
+      const kartPosition =
+        scrollPercent *
+        SCROLL_MULTIPLIER_KART *
+        (document.body.clientWidth - kartRef.current!.clientWidth);
+      const carPosition =
+        scrollPercent *
+        SCROLL_MULTIPLIER_CAR *
+        (document.body.clientWidth - carRef.current!.clientWidth);
 
-            const scrollPercent = currScroll / documentHeight;
+      kartRef.current!.style.left = `${kartPosition}px`;
+      carRef.current!.style.left = `${carPosition}px`;
 
-            const kartPosition =
-                scrollPercent *
-                SCROLL_MULTIPLIER_KART *
-                (document.body.clientWidth - kartRef.current!.clientWidth);
-            const carPosition =
-                scrollPercent *
-                SCROLL_MULTIPLIER_CAR *
-                (document.body.clientWidth - carRef.current!.clientWidth);
+      setScrolled(
+        window.scrollY > (reviewDivRef.current?.getBoundingClientRect().y || 0)
+      );
+    });
+  }, []);
 
-            kartRef.current!.style.left = `${kartPosition}px`;
-            carRef.current!.style.left = `${carPosition}px`;
-        });
-        return () => observer.disconnect();
-    }, []);
+  useEffect(() => {
+    document.title = `F${count}RT`;
+  }, [count]);
 
-    useEffect(() => {
-        document.title = `F${count}RT`;
-    }, [count]);
-
-    return (
-        <div className="App">
-            <h1 style={{userSelect: "none"}}>
-                F
-                <span
-                    onClick={() => setCount((prev) => (prev + 1) % 10)}
-                    style={{cursor: "pointer"}}
-                >
+  return (
+    <div className="App">
+      <h1 style={{ userSelect: "none" }}>
+        F
+        <span
+          onClick={() => setCount((prev) => (prev + 1) % 10)}
+          style={{ cursor: "pointer" }}
+        >
           {count}
         </span>
-                RT
-            </h1>
-            <div className={`scroll-down ${scrolled ? "scrolled" : ""}`}>
-                Scroll down &darr;
-            </div>
-            <h3>
-                Introducing the ultimate speed demon of the track - our blazing fast
-                go-kart that'll leave your heart racing and your adrenaline pumping!
-                With lightning-fast acceleration and hair-raising top speeds that rival
-                even the fiercest Formula One cars, you'll feel like a true racing
-                champion as you take on every twist and turn of the course. So strap in,
-                hold on tight, and get ready for the ride of your life with our
-                lightning-fast go-kart - the ultimate thrill seeker's dream come true!
-            </h3>
-            <div id={"race"} ref={raceRef}>
-                <img src={redbull} alt="F1 Car" ref={carRef} id={"car"}/>
-                <img src={kart} alt="F1RT" ref={kartRef} id={"kart"}/>
-            </div>
-            <div>
-                <div ref={reviewDivRef}>
-                    <h2 data-aos="fade-down">Our Reviews</h2>
-                    {reviews.map((val, idx) => (
-                        <Review
-                            key={idx} review={val.review}
-                            star={val.stars as 4 | 4.5 | 5}
-                            image={images[idx]}
-                            name={val.name}
-                            direction={idx % 2 == 0 ? "left" : "right"}
-                        />
-                    ))}</div>
+        RT
+      </h1>
+      <div className={`scroll-down ${scrolled ? "scrolled" : ""}`}>
+        Scroll down &darr;
+      </div>
+      <h3>
+        Introducing the ultimate speed demon of the track - our blazing fast
+        go-kart that'll leave your heart racing and your adrenaline pumping!
+        With lightning-fast acceleration and hair-raising top speeds that rival
+        even the fiercest Formula One cars, you'll feel like a true racing
+        champion as you take on every twist and turn of the course. So strap in,
+        hold on tight, and get ready for the ride of your life with our
+        lightning-fast go-kart - the ultimate thrill seeker's dream come true!
+      </h3>
+      <div id={"race"} ref={raceRef}>
+        <img src={redbull} alt="F1 Car" ref={carRef} id={"car"} />
+        <img src={kart} alt="F1RT" ref={kartRef} id={"kart"} />
+      </div>
+      <div>
+        <div ref={reviewDivRef}>
+          <h2 data-aos="fade-down">Our Reviews</h2>
+          {reviews.map((val, idx) => (
+            <Review
+              key={idx}
+              review={val.review}
+              star={val.stars as 4 | 4.5 | 5}
+              image={images[idx]}
+              name={val.name}
+              direction={idx % 2 == 0 ? "left" : "right"}
+            />
+          ))}
+        </div>
 
                 <h2>Specifications</h2>
                 <div id="specifications">
