@@ -24,6 +24,8 @@
 | eine eigene CSS-Animation                                        |    ✅     | Go-Kart fährt im Kreis (oder so)                                      |
 | optional werden Resultate automatisch publiziert z.B.            |    ✅     | GH-Pages + GH-Actions                                                 |
 
+<hr/>
+
 ## Selbstevaluation
 
 Wir sind sehr gut vorangekommen und haben schnell Fortschritte gemacht. Technisch hatten wir keine Probleme. Alles
