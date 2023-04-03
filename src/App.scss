@@ -62,7 +62,8 @@
 
   table {
     width: 100%;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border: 1px solid #555555;
     border-radius: 25px;
 
@@ -71,12 +72,17 @@
       text-align: left;
     }
 
-    tr:nth-child(1) {
-      backdrop-filter: invert(25%);
-    };
-    tr:nth-child(odd) {
-      backdrop-filter: invert(10%);
+    tr {
+      margin-left: 1rem;
+      margin-right: 1rem;
 
+      &:nth-child(1) {
+        backdrop-filter: invert(25%);
+      }
+
+      &:nth-child(odd) {
+        backdrop-filter: invert(10%);
+      }
     }
   }
 
